@@ -1,0 +1,34 @@
+﻿@page
+@model Formation_TP1.Pages.Restaurant.addModel
+@{
+}
+heeloo
+    <form method="post">
+        <div class="mb-3">
+            @Html.LabelFor(m=>m.Restaurant.Name)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m=>m.Restaurant.Name)
+            </div>
+            <span class="text-red"> @Html.ValidationMessageFor(m => m.Restaurant.Name)</span>
+            
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m=>m.Restaurant.Address)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m=>m.Restaurant.Address)
+            </div>
+            <span class="text-red">   @Html.ValidationMessageFor(m => m.Restaurant.Address)</span>
+
+          
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m=>m.Restaurant.cuisine)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m=>m.Restaurant.cuisine)
+            </div>
+            <span class="text-red"> @Html.ValidationMessageFor(m => m.Restaurant.cuisine)</span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>

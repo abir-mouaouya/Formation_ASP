@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Formation_TP1.props" />
+</Project>

@@ -1,0 +1,38 @@
+﻿@page
+@model Formation_TP1.Pages.Restaurant.listModel
+@{
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Cuisine
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var restaurant in Model.restaurants)
+        {
+            <tr>
+                <td>
+                    @restaurant.Name
+                </td>
+                <td>
+                    @restaurant.cuisine
+                </td>
+                <td>              
+                        <a type="button" asp-page="Restaurant/detail" asp-route-id="@restaurant.Id" >Details</a>
+                        <a type="button" asp-page="Restaurant/Edit" asp-route-id="@restaurant.Id" >Edit</a>
+                        <a type="button" asp-page="Restaurant/delete" asp-route-id="@restaurant.Id"  >Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>
